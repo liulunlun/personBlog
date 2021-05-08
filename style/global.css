@@ -1,0 +1,96 @@
+*{margin: 0; padding: 0;}
+li{ list-style: none;}
+body{ font-family: "monospace"}
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: "."; clear: both; height: 0; }
+.clearfix{*zoom:1;}
+.fl{ float: left;}
+.fr{float: right;}
+@font-face {
+    font-family:'腾祥小新体简';
+    src: url("../font/腾祥小新体简.eot");
+    src: url("../font/腾祥小新体简.ttf");
+    src: url("../font/腾祥小新体简.woff");
+
+}
+
+/*首页 home*/
+.page{ width: 100%;}
+.title{ width: 100%; background: url("../images/bg_home.jpg") no-repeat  center; text-align: center;}
+.overlay{ position: relative; width: 100%; background-color: rgba(255,144,0,0.9);}
+.home_cont{ position: absolute; left: 42%; top: 30%;}
+.home_cont img{ width: 200px; height: 200px; border-radius: 50%;}
+.home_cont .name{ margin-top: 20px; font-family:"腾祥小新体简"; font-size: 30px; transform:rotate(-10deg); color: #fff;}
+.home_cont .post{ margin-top: 20px;font-family:"腾祥小新体简"; font-size: 24px; color: #fff;}
+
+/*个人简介 intro*/
+.intro{ width: 100%; margin-top: 50px;  text-align: center; background-color: #fff;}
+.intro h2{ margin: 50px 0;}
+.infor{ float: left; width: 35%;  margin-left: 10%; text-align: left; }
+.infor li{ height: 50px; line-height: 50px; font-weight: bold;}
+.infor span,a{ font-weight: normal; color: rgba(0,0,0,.5)}
+.words{ float: left; width: 45%;  margin-right: 10%; text-align: left;}
+.words p{margin-top: 20px; line-height: 35px; color: rgba(0,0,0,.5);}
+
+/*个人经历 resumer*/
+.resume{ width: 100%; margin-top:50px; text-align: center;}
+.exper{ position: relative; width: 80%; margin: 0 10%; text-align: center;}
+.exper li>h3{width: 100px; margin: 100px auto 0;  font-size:16px;  line-height: 30px; background-color: #e6e6e6; border-radius: 5px;}
+.exper li{ position: relative; }
+.line{ position: absolute;  width: 2px;  height:750px; margin-left:49.8%; margin-top:100px; background-color: #e6e6e6;}
+.time{position: absolute; margin-top: 20px; left: 48.5%; width: 40px; height: 40px; border-radius: 50%; background-color: #ff9000;}
+.time i{ display: inline-block; width: 32px; height: 32px; margin-top: 4px;  background:url("../images/time.png")  no-repeat center;}
+.ex_cont{ width: 40%; margin-top: 50px; text-align: right;}
+.ex_cont h3{ font-size: 16px;}
+.ex_cont span{  display:inline-block; margin: 10px 0; color: #bfbfbf;}
+.ex_fr{margin-left:  60%; text-align: left;!important;}
+
+/*专业技能 skill*/
+.skill{ width: 80%; margin: 0 10%; }
+.skill h2{ margin-top:100px ; text-align: center;}
+.skill_cont{ width: 80%; margin: 50px 10%;}
+.skill_cont p{ text-align: left;}
+.skill_cont p span{ margin-left: 80%;}
+.bar{ width: 100%; height: 10px; background-color: #bfbfbf; border-radius: 10px;}
+.bar div{ height:100%;  border-radius: 10px;}
+
+/*项目展示 item*/
+.item{ width: 100% ;  padding: 100px 0;  background-color: #ff9000; text-align: center;}
+.item h2{ color: #fff; margin-bottom: 20px; }
+.item_list{padding: 0 10%; margin: 20px auto; text-align: center;}
+.item_list  li{float: left; position: relative; width: 23.5%; margin:  5px;}
+.item_list a{ display: inline-block; }
+.item_list img{ width:100%}
+.item_list  p{opacity: 0; position: absolute; top: 0; left: 0;  width: 100%; height: 99%;background-color: #fff; text-align: center; color: #000; }
+.item_list li span{opacity: 0.4; position: absolute; display: block; width: 100%; text-align: center;}
+.item_list li .name{top: 80px;color: #000;}
+.item_list li .type{bottom: 80px; display: block; font-size: 14px; color: #bfbfbf;}
+
+
+/*自适应*/
+@media screen and  (min-width: 601px) {
+    .item_list  p{transition: opacity 1s;  -webkit-transition: opacity 1s; }
+    .item_list p:hover{opacity: 1;}
+    .item_list  .name{transition: top 1s;  -webkit-transition: top 1s; }
+    .item_list li:hover .name{top:100px; opacity: 1;}
+    .item_list  .type{transition: bottom 1s;  -webkit-transition: bottom 1s;}
+    .item_list li:hover .type{bottom: 100px; opacity: 1;}
+}
+
+@media screen and (max-width: 600px) {
+    /*首页 home*/
+    .home_cont{left: 22%;top:22%;}
+    /*个人简介 intro*/
+    .infor{ float: none; width: 80%;}
+    .words{float: none; width:80%; margin-left: 10%; margin-top: 20px;}
+    /*个人经历 expr*/
+    .line{ margin-left: 10%;}
+    .time{left:-5%;}
+    .exper li>h3{ margin-left: 0;}
+    .ex_cont{ width: 80%; margin-top: 50px;  margin-left:80px; text-align: left;}
+    /*项目展示 item*/
+    .item_list  li{ float: none; width: 60%; margin: 5px auto; text-align: center;}
+    .item_list img{ width:100%;}
+    .item_list  p{ display: block; opacity: 1; background-color: rgba(255,255,255,0.8);}
+   .item_list  p .name{ opacity: 1;top:30%;}
+    .item_list  p .type{ opacity: 1; bottom: 30%;}
+}
